@@ -5,7 +5,6 @@ import java.util.Date;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
 import io.jsonwebtoken.Jwts;
@@ -24,7 +23,7 @@ public class JwtUtils {
 	
 	
 	//clase que genera el token
-	public String generateJwtToken(Authentication authentication, String nombre) {
+	public String generateJwtToken(String nombre) {
 		
 		LOG.info("Semilla: " + jwtSecret + " Tiempo: "+ jwtExpiration);
 		
